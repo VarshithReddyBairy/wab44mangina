@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= Slot Machine
+  
+- var image_names = ["iPhone.jpg", "ipad.jpg", "macbook.jpg", "appleWatch.jpg", "airpodsPro.jpg"]
+- for(let i=0; i<3; i++){
+    img(src=`/images/${image_names[Math.floor(Math.random()*5)]}` alt=`Image No ${Math.floor(Math.random()*5)}` height="300px" width="300px")
+}

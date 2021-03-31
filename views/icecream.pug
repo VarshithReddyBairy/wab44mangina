@@ -2,4 +2,8 @@ extends layout
 
 block content
   h1= title
-  
+  - var results = [{type:"Rolled", price: 20.0, flavor:"ButterScotch"},{type:"Soft Serve", price: 30.0, flavor:"Black Current"},{type:"Gelato", price: 40.0, flavor:"Chocolate"}]
+  div(class="container-fluid")
+   div(class="row")
+    each form in results
+     div(class="col-sm-2") type: #{form.type} - price: #{form.price} - flavor: #{form.flavor}
